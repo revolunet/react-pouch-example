@@ -25,8 +25,7 @@ const syncURL = "https://docker-pouch1.now.sh/";
 const dbName = "encrypted10";
 const password = "12345678";
 
-// 42093701/32571287142
-// 42158473/32571287142 bytes
+// return device storage capacity
 class GetStorage extends React.Component {
   state = {
     usedBytes: 0,
@@ -53,6 +52,7 @@ class GetStorage extends React.Component {
   }
 }
 
+// return some attachment
 class WithRxDBAttachment extends Component {
   state = {
     url: null
@@ -206,6 +206,7 @@ class App extends Component {
     this.setState({ newMessage: event.target.value });
   };
 
+  // use image base64
   async addMessage(blob) {
     const id = Date.now().toString();
     const newMessage = { id, message: this.state.newMessage };
